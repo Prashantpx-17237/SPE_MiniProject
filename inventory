@@ -1,3 +1,2 @@
 [TheBoys]
-172.16.128.35 ansible_user=jayant ansible_sudo_pass=jayant@2011
-172.16.134.136 ansible_user=albus ansible_sudo_pass=thisispassword
+ansible_host = 172.16.1393.159 ansible_user = px ansible_pass=MT2022079
