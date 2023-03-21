@@ -4,14 +4,13 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Calculator {
-    private static final Logger logger = LogManager.getLogger(Calculator.class);
+public class App {
+    private static final Logger logger = LogManager.getLogger(App.class);
 
-    public Calculator() {
+    public App() {
     }
-
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        App app = new App();
         Scanner scanner = new Scanner(System.in);
         double d_number1, d_number2;
         int i_number1;
@@ -54,7 +53,7 @@ public class Calculator {
                             if (i_number1 < 0)
                                 System.out.println("Factorial is only applicable for non-negative integers");
                             else
-                                System.out.println("Factorial of " + i_number1 + " is: " + calculator.factorial(i_number1) + "\n");
+                                System.out.println("Factorial of " + i_number1 + " is: " + app.factorial(i_number1) + "\n");
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
@@ -78,7 +77,7 @@ public class Calculator {
                             if (d_number1 < 0)
                                 System.out.println("Square Root is only applicable for non-negative numbers");
                             else
-                                System.out.println("Square Root of " + d_number1 + " is: " + calculator.squareRoot(d_number1) + "\n");
+                                System.out.println("Square Root of " + d_number1 + " is: " + app.squareRoot(d_number1) + "\n");
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
@@ -115,7 +114,7 @@ public class Calculator {
                         scanner.nextLine(); // Clear the buffer to receive new input
                     }
 
-                    System.out.println(d_number1 + " raised to " + d_number2 + " is: " + calculator.power(d_number1, d_number2));
+                    System.out.println(d_number1 + " raised to " + d_number2 + " is: " + app.power(d_number1, d_number2));
                     System.out.println("\n");
                     break;
 
@@ -132,7 +131,7 @@ public class Calculator {
                             if (d_number1 <= 0)
                                 System.out.println("Natural Logarithm is only applicable for positive numbers");
                             else
-                                System.out.println("Natural Logarithm of " + d_number1 + " is: " + calculator.naturalLog(d_number1) + "\n");
+                                System.out.println("Natural Logarithm of " + d_number1 + " is: " + app.naturalLog(d_number1) + "\n");
                         }
                         // To handle cases where user enters non-numeric input
                         catch (InputMismatchException e) {
