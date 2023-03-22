@@ -17,3 +17,5 @@
         state: started
         tty: yes
         interactive: yes
+    - name: running calculator
+      shell: docker run -it -d mt2022079/spe-mini-project
