@@ -1,17 +1,19 @@
 ---
-- name: Pull docker image of Calculator
+- name: Deploy Docker Image to Container
   hosts: all
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
+    - name: Pull Docker Image
+      docker_image:
+        name: mt2022079/spe-mini-project
+        tag: latest
+        source: pull
 
-    - name: Start docker service
-      service:
-        name: docker
+    - name: Create & Start Calculator Docker Container
+      docker_container:
+        name: calculator
+        image: mt2022079/spe-mini-project
         state: started
-
-    - name: pull docker image
-      shell: docker pull mt2022079/spe-mini-project
-
-    - name: running container
-      shell: docker run -it -d mt2022079/spe-mini-project
+        tty: yes
+        interactive: yes
