@@ -1,1 +1,1 @@
-ansible_host = 127.0.1.1 ansible_user=px ansible_pass=MT2022079
+ansible_host=172.16.139.159 ansible_user=px ansible_pass=MT2022079
